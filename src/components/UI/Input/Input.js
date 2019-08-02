@@ -18,6 +18,9 @@ const input = (props) => {
                 {...props.elementConfig}
                 value={props.value}/>;
             break;
+        case ('select'):
+            // inputElement =
+            break;
         default:
             inputElement = <input
                 className={classes.InputElement}
