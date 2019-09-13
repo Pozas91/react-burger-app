@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import Layout from './hoc/Layout/Layout';
@@ -38,7 +38,7 @@ class App extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         onTryAuthSignup: () => dispatch(actions.authCheckState())
-    }
-}
+    };
+};
 
-export default connect(null, mapDispatchToProps)(App);
+export default withRouter(connect(null, mapDispatchToProps)(App));
