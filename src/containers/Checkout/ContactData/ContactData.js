@@ -118,8 +118,6 @@ class ContactData extends Component {
         };
 
         this.props.onOrderBurger(order, this.props.token);
-
-        console.log(this.props.ingredients);
     };
 
     inputChangedHandler = (event, inputIdentifier) => {
@@ -139,8 +137,6 @@ class ContactData extends Component {
         for (let inputIdentifier in updatedOrderForm) {
             formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
         }
-
-        console.log(formIsValid);
 
         this.setState({
             orderForm: updatedOrderForm,
