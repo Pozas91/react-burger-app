@@ -6,9 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import NavigationItems from './NavigationItems';
 import NavigationItem from './NavigationItem/NavigationItem';
 
-configure({
-    adapter: new Adapter()
-});
+configure({adapter: new Adapter()});
 
 describe("<NavigationItems />", () => {
 
