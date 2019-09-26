@@ -46,7 +46,7 @@ class App extends Component {
                 <Switch>
                     <Route path={"/checkout"} component={asyncCheckout}/>
                     <Route path={'/orders'} component={asyncOrders}/>
-                    <Route path={'/logout'} component={asyncLogout}/>
+                    <Route path={'/logoutSaga'} component={asyncLogout}/>
                     <Route path={'/auth'} component={asyncAuth}/>
                     <Route path={"/"} exact component={BurgerBuilder}/>
                     <Redirect to={"/"}/>
