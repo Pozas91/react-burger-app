@@ -69,7 +69,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onTryAuthSignup: () => dispatch(actions.authCheckState())
+        onTryAuthSignUp: () => dispatch(actions.authCheckState())
     };
 };
 
