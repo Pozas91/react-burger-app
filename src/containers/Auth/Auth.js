@@ -45,13 +45,15 @@ const Auth = (props) => {
         }
     });
 
-    const [isSignUp, setisSignUp] = useState(true);
+    const [isSignUp, setIsSignUp] = useState(true);
+
+    const {buildingBurger, authRedirectPath, onSetAuthRedirectPath} = props;
 
     useEffect(() => {
-        if (!props.buildingBurger && props.authRedirectPath !== '/') {
-            props.onSetAuthRedirectPath();
+        if (!buildingBurger && authRedirectPath !== '/') {
+            onSetAuthRedirectPath();
         }
-    }, []);
+    }, [buildingBurger, authRedirectPath, onSetAuthRedirectPath]);
 
     const inputChangedHandler = (event, controlName) => {
 
@@ -72,7 +74,7 @@ const Auth = (props) => {
     };
 
     const switchAuthModeHandler = () => {
-        setisSignUp(!isSignUp);
+        setIsSignUp(!isSignUp);
     };
 
     const formElementsArray = [];
